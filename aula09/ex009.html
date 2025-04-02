@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgba(70, 70, 255, 0.801);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <div class="msg">Outra opção</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('O primeiro parágrafo é: ' + p1.innerText)
+        p1.style.color = 'blue'
+        corpo.style.background = 'gray'
+
+        //var d = window.document.getElementById('msg')
+        //d.style.background = 'green'
+        //d.innerText = 'Estou aguardando...'
+
+        /*var b = window.document.getElementsByClassName('msg')[0]
+        b.style.background = 'purple'
+        b.innerText = 'Testando outra opção de seleção...'
+        */
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'red'
+        d.style.color = 'yellow'
+
+        var b = window.document.querySelector('div.msg')
+        b.style.background = 'purple'
+        b.style.color = 'black'
+        b.innerText = 'Testando outra opção com o QuerySelector...'
+    </script>
+</body>
+</html>
