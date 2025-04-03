@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de nacionalidades</title>
+</head>
+<body>
+    <h1>Bem vindo ao Brasil</h1>
+    <p id="boasvindas">
+        Você acabou de ingressar na República Federativa do Brasil.
+        Siga as instruções abaixo para receber algumas informações.
+    </p>
+
+    <p>Indique aqui a sua nacionalidade para fornecermos algumas informações.</p>
+    <p>Nacionalidade: <input type="text" name="nac" id="nac" autofocus autocomplete="country"></p>
+    <p><input type="button" value="Enviar" onclick="analisar()"></p>
+    <div id="inf">
+
+    </div>
+
+    <script>
+        function analisar() {
+            var nac = window.document.querySelector('#nac')
+            var res = window.document.querySelector('#inf')
+            if (nac.value == 'Brasil') {
+                res.innerHTML = `<p>Seja bem vindo de volta ao Brasil, esperamos que tenha feito uma ótima viagem!!</p>`
+                res.innerHTML += `<p>Se deseja receber algum tipo de auxílio no desembarque, siga até o próximo balcão de atendimento e solicite o auxílio necessário.</p>`
+            } else {
+                res.innerHTML = `<p>Seja muito bem vindo ao Brasil, esperamos que tenha feito uma ótima viagem!!</p>`
+                res.innerHTML += `<p>Siga as instruções de desembarque, e caso precise de algum tipo de auxílio, peça ajuda no próximo balcão de atendimento.</p>`
+                res.innerHTML += `<p>Desejamos a você uma boa viagem e boa estadia no Brasil. Caso se encontre em alguma situação emergência, colocaremos abaixo alguns números para que você possa recorrer nesse tipo de caso.</p>`
+                res.innerHTML += `<p>Números de emergência:</p>`
+                res.innerHTML += `<p>Polícia Militar: 190</p>`
+                res.innerHTML += `<p>SAMU (atendimento médico): 192</p>`
+                res.innerHTML += `<p>Corpo de bombeiros: 193</p>`
+            }
+        }
+    </script>
+</body>
+</html>
