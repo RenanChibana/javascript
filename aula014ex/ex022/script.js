@@ -2,8 +2,8 @@ function tabuada() {
     var num = document.getElementById('num')
     var tab = document.getElementById('seltab')
     document.writeln = `Tabuada do ${num.value}:<br>`
-    
 
+    
     if (num.value.length == 0) {
         window.alert('[ERRO] Digite um valor válido para gerar a tabuada.')
     } else {
