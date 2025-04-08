@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Adicionando números</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>
+                <label for="num">Número de 1 a 100: <input type="number" name="num" id="num"></label>
+                <input type="button" value="Adicionar" onclick="add()">
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <select name="val" id="val" size="10">
+                    <option>Adicione um número acima.</option>
+                </select>
+            </p>
+            <p><input type="button" value="Finalizar" onclick="resultado()"></p>
+        </div>
+        <div id="res">resultado</div>
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+<footer>&copy; Renan</footer>
+</html>
