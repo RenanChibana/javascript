@@ -25,6 +25,7 @@ function add() {
         let item = document.createElement('option')
         item.text = `Número ${num.value} adicionado.`
         val.appendChild(item)
+        res.innerHTML = ''
     } else {
         window.alert('Número inválido ou já encontrado na lista.')
     }
@@ -56,10 +57,10 @@ function finalizar() {
         }
         let med = soma / tot
         res.innerHTML = ''   
-        res.innerHTML += `<br>Ao todo temos ${tot} números cadastrados.`
-        res.innerHTML += `<br>O maior valor foi ${mai}.`
-        res.innerHTML += `<br>O menor valor foi ${men}.`
-        res.innerHTML += `<br>A soma de todos os valores é ${soma}.`
-        res.innerHTML += `<br>A média dos valores é de ${med}.`
+        res.innerHTML += `<p>Ao todo temos ${tot} números cadastrados.</p>`
+        res.innerHTML += `<p>O maior valor foi ${mai}.</p>`
+        res.innerHTML += `<p>O menor valor foi ${men}.</p>`
+        res.innerHTML += `<p>A soma de todos os valores é ${soma}.</p>`
+        res.innerHTML += `<p>A média dos valores é de ${med}.</p>`
         }
 }
